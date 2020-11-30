@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-    acts_as_token_authenticatable
+  # acts_as_token_authenticatable
 end

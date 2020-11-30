@@ -1,6 +1,13 @@
 <div class ="container">
-  <h1>Users#show1</h1>
-  <p>Find me in app/views/users/show.html.erb</p>
-  <%= @user.first_name %>
-  <%= @user.last_name %>
+  <h1>User profile</h1>
+  <p>
+    Customer number: <%= @user.customer_number %>
+  </p>
+  <p>
+    Name: <%= "#{@user.first_name} #{@user.last_name}" %><br>
+    Email: <%= @user.email %>
+  </p>
+  <p>
+    Address: <%= "#{@user.street_name}, #{@user.street_number}, #{@user.zip} #{@user.city}" %>
+  </p>
 </div>
