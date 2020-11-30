@@ -3,11 +3,9 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def update
     @user = User.find_by(customer_number: user_params[:customer_number])
-    logger.debug("AAAAA")
-    logger.debug(@user)
 
     if @user.update(user_params)
-      # do nothing; but we need to return code 200
+      render json: {}, status: 200
     else
       render_error
     end
@@ -23,5 +21,4 @@ class Api::V1::UsersController < Api::V1::BaseController
     render json: { errors: @user.errors.full_messages },
            status: :unprocessable_entity
   end
-
 end

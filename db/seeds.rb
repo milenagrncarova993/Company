@@ -13,7 +13,7 @@ User.create(
   last_name: "Perez", 
   street_name: "Alte Str.", 
   street_number: "99", 
-  zip: "10100", 
+  zip: "20002", 
   city: "Berlin", 
   customer_number: "2020-A-007", 
   email: "user@gmail.com")
