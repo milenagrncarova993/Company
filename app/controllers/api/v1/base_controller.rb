@@ -1,4 +1,4 @@
-class Api::V1::BaseController < ActionController::API
+class Api::V1::BaseController < < Api::V1::BaseController
 
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
   
