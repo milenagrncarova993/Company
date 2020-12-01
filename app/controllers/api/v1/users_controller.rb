@@ -4,11 +4,10 @@ class Api::V1::UsersController < Api::V1::BaseController
   def update
     @user = User.find_by(customer_number: user_params[:customer_number])
 
-    if @user.update(user_params)
-      render json: {}, status: 200
-    else
-      render_error
-    end
+    return render json: {}, status: 404 unless @user.present?
+    return render_error unless @user.update(user_params)
+
+    render json: {}, status: 200
   end
 
   private
