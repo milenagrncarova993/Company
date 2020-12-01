@@ -15,7 +15,7 @@ User.create(
   street_number: "99", 
   zip: "20002", 
   city: "Berlin", 
-  customer_number: "2020-A-007", 
+  customer_number: "2020-A-567", 
   email: "user@gmail.com")
 
 puts "Users in the DB: ", User.count
