@@ -1,6 +1,6 @@
-<div class="container mt-3">
-  <h2>Your profile</h2>
-  <p class="mt-3">
+<div class="container mt-5">
+  <h2>Your account at Some Company</h2>
+  <p class="mt-5">
     <strong>Name</strong>: <%= "#{@user.first_name} #{@user.last_name}" %><br>
     <strong>Email</strong>: <%= @user.email %>
   </p>
@@ -10,4 +10,5 @@
   <p>
     <strong>Address</strong>: <%= "#{@user.street_name}, #{@user.street_number}, #{@user.zip} #{@user.city}" %>
   </p>
+  <%= link_to "Back", root_path, class: "btn btn-success mt-5" %>
 </div>
