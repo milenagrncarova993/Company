@@ -9,13 +9,13 @@
 User.destroy_all
 
 User.create(
-  first_name: "Anne", 
-  last_name: "Perez", 
+  first_name: "Christoph", 
+  last_name: "Kuhlkid", 
   street_name: "Alte Str.", 
   street_number: "99", 
   zip: "20002", 
   city: "Berlin", 
   customer_number: "2020-A-567", 
-  email: "user@gmail.com")
+  email: "c.k@gmail.com")
 
 puts "Users in the DB: ", User.count
