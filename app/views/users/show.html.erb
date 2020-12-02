@@ -1,14 +1,16 @@
-<div class="container mt-5">
-  <h2>Your account at Travel Dream</h2>
-  <p class="mt-5">
-    <strong>Name</strong>: <%= "#{@user.first_name} #{@user.last_name}" %><br>
-    <strong>Email</strong>: <%= @user.email %>
-  </p>
-  <p>
-    <strong>Account number</strong>: <%= @user.customer_number %>
-  </p>
-  <p>
-    <strong>Address</strong>: <%= "#{@user.street_name}, #{@user.street_number}, #{@user.zip} #{@user.city}" %>
-  </p>
-  <%= link_to "Back", root_path, class: "btn btn-success mt-5" %>
+<div class="container my-5">
+  <div class="card">
+  <h5 class="card-header text-white bg-warning">Your account at Travel Dream</h5>
+    <div class="card-body">
+      <p> <strong>Name</strong>: <%= "#{@user.first_name} #{@user.last_name}" %></p>
+
+      <p> <strong>Account number</strong>: <%= @user.customer_number %></p>
+
+      <p><strong>Email</strong>: <%= @user.email %></p>
+
+      <p> <strong>Address</strong>: <%= "#{@user.street_name}, #{@user.street_number}, #{@user.zip} #{@user.city}" %></p>
+       <%= link_to "Back", root_path, class: "btn btn-success btn-lg rounded mt-3" %>
+   </div>
+  </div>
 </div>
+
