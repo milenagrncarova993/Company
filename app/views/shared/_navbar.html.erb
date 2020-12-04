@@ -1,22 +1,41 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "van_icon.png" %>
-  <% end %>
+
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "traveldream_logo.png" %>
+      <% end %>
 
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <%= image_tag "avatar.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "My profile", profile_path, class: "dropdown-item" %>
-        </div>
-      </li>
-    </ul>
-  </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="container d-flex nav-item text-center">
+              <%= link_to profile_path, class: "dropdown-item" do %>
+             <i class="far fa-heart"></i><br> Favorites
+              <% end %>
+          </li>
+          <li class="container d-flex nav-item text-center">
+             <%= link_to profile_path, class: "dropdown-item" do %>
+             <i class="far fa-bell"></i><br> Updates
+              <% end %>
+          </li>
+
+
+
+
+          <li class="nav-item dropdown">
+            <%= image_tag "avatar-placeholder.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "My profile", profile_path, class: "dropdown-item bg-light" %>
+              <%= link_to "Log out", profile_path, class: "dropdown-item bg-light" %>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
 </div>
