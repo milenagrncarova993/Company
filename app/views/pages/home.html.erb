@@ -1,9 +1,9 @@
   <div class="container-banner">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url('<%= asset_url('banner-travel.jpg')%>');">
 
-    <div class="container text-center p-5">
-      <h1>Welcome to Travel Dream</h1>
-      <p> We make your travel dreams come true!</p>
+    <div class="container text-center justify-content-center p-5">
+      <%= image_tag 'travelwhite.png', width: "500px" %>
+      <p class="mt-1"> We make your travel dreams come true!</p>
 
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="search-form-control w-100 form-group">
