@@ -2,7 +2,8 @@ class Api::V1::UsersController < Api::V1::BaseController
   # acts_as_token_authentication_handler_for User
 
   def update
-    @user = User.find_by(customer_number: user_params[:customer_number])
+    # @user = User.find_by(customer_number: user_params[:customer_number])
+    @user = User.first
 
     return render json: {}, status: 404 unless @user.present?
     return render_error unless @user.update(user_params)
